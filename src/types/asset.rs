@@ -18,7 +18,6 @@ pub struct Asset {
     pub symbol: String,
     pub name: String,
     pub ty_: AssetType,
-    pub decimals: u8,
     pub crypto_address: BTreeMap<NetworkId, AssetAddress>,
 }
 
