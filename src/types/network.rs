@@ -36,6 +36,15 @@ pub struct NetworkId {
     pub chain_id: String,
 }
 
+impl NetworkId {
+    pub fn eip155(chain_id: u64) -> Self {
+        Self {
+            network_type: NetworkType::Eip155,
+            chain_id: chain_id.to_string(),
+        }
+    }
+}
+
 #[derive(Debug, Serialize, Deserialize)]
 pub struct NetworkInfo {
     pub name: String,
