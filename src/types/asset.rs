@@ -23,5 +23,6 @@ pub struct Asset {
     pub name: String,
     pub ty_: AssetType,
     pub description: Option<String>,
+    pub link: Option<String>,
     pub crypto_address: BTreeMap<NetworkId, AssetAddress>,
 }

@@ -43,6 +43,7 @@ pub struct NetworkInfo {
     pub chain_id: String,
     pub native_asset: Option<String>,
     pub decimals: u8,
+    pub symbol: String,
     pub rpc_urls: Vec<String>,
     pub selected_rpc_url: usize,
     pub explorers: Vec<Explorer>,
