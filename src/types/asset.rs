@@ -16,9 +16,8 @@ pub enum AssetType {
 
 pub struct Asset {
     pub symbol: String,
+    pub asset_id: String,
     pub name: String,
     pub ty_: AssetType,
     pub crypto_address: BTreeMap<NetworkId, AssetAddress>,
 }
-
-pub struct AssetId(pub u32);
