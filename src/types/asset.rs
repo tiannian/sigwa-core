@@ -24,5 +24,11 @@ pub struct Asset {
     pub ty_: AssetType,
     pub description: Option<String>,
     pub link: Option<String>,
-    pub crypto_address: BTreeMap<NetworkId, AssetAddress>,
+    pub crypto_address: Vec<CryptoAddress>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct CryptoAddress {
+    pub network_id: NetworkId,
+    pub address: AssetAddress,
 }
