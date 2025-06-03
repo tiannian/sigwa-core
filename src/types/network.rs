@@ -40,7 +40,7 @@ pub struct NetworkInfo {
     pub name: String,
     pub network_type: NetworkType,
     pub chain_id: String,
-    pub native_asset: String,
+    pub native_asset: Option<String>,
     pub decimals: u8,
     pub rpc_urls: Vec<String>,
     pub selected_rpc_url: usize,
