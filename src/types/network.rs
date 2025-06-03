@@ -30,7 +30,7 @@ impl From<NetworkType> for i64 {
     }
 }
 
-#[derive(Debug, Serialize, Deserialize, Ord, PartialOrd, Eq, PartialEq)]
+#[derive(Debug, Clone, Serialize, Deserialize, Ord, PartialOrd, Eq, PartialEq)]
 pub struct NetworkId {
     pub network_type: NetworkType,
     pub chain_id: String,
