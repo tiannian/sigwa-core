@@ -8,7 +8,6 @@ use super::NetworkId;
 #[derive(Debug, Serialize, Deserialize)]
 pub enum AssetAddress {
     Eip155(Address),
-    Native,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -23,5 +22,6 @@ pub struct Asset {
     pub asset_id: String,
     pub name: String,
     pub ty_: AssetType,
+    pub description: Option<String>,
     pub crypto_address: BTreeMap<NetworkId, AssetAddress>,
 }
