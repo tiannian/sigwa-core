@@ -1,22 +1,23 @@
 use std::collections::BTreeMap;
 
 use alloy_primitives::Address;
+use serde::{Deserialize, Serialize};
 
 use super::NetworkId;
 
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 pub enum AssetAddress {
     Eip155(Address),
     Native,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 pub enum AssetType {
     Crypto,
     Fiat,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct Asset {
     pub symbol: String,
     pub asset_id: String,
